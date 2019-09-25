@@ -49,9 +49,8 @@ export default {
       const today = new Date();
 
       const date = new Date(today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate());
+
       const startingDateMilli = new Date(this.startingDate);
-
-
       
       const daysSinceStart = date.getTime() / 86400000 - startingDateMilli/86400000;
 
@@ -61,7 +60,7 @@ export default {
 
       const milesPerDay = parseFloat(totalMiles) / parseFloat(daysInLease);
 
-      return Math.floor(milesPerDay*daysSinceStart + parseFloat(this.startingMileage));
+      return Math.floor(parseFloat(milesPerDay) * parseFloat(daysSinceStart) + parseFloat(this.startingMileage));
 
     },
   },
