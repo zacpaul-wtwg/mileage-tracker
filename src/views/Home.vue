@@ -25,10 +25,11 @@ import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
 export default {
   data() {
     return {
-      startingMileage: null,
-      startingDate: null,
-      leaseTermYears: null,
-      milesPerYear: null,
+      //something about these being null as default keeps page from loading. Additionally, vue router isn't forwarding users with no data to the settings page.
+      startingMileage: 0,
+      startingDate: '1970-01-01',
+      leaseTermYears: 3,
+      milesPerYear: 1,
     };
   },
   computed: {
