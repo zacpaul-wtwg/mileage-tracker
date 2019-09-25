@@ -57,8 +57,6 @@ export default {
 
       const daysSinceStart = date.getTime() / 86400000 - startingDateMilli/86400000;
 
-      window.alert(startingDateMilli/86400000);
-
       const daysInLease = parseFloat(this.leaseTermYears) * 365;
 
       const totalMiles = (parseFloat(this.leaseTermYears) * parseFloat(this.milesPerYear));
