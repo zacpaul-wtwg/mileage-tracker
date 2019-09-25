@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       startingMileage: null,
-      startingDate: '2019-07-10',
+      startingDate: null,
       leaseTermYears: null,
       milesPerYear: null,
     };
