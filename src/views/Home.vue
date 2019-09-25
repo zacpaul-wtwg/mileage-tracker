@@ -48,9 +48,13 @@ export default {
 
       const today = new Date();
 
-      const date = new Date(today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate());
+      const date = new Date((today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear());
 
-      const startingDateMilli = new Date(this.startingDate);
+      const startingParts = this.startingDate.split('-');
+
+      const startingDateFormatted = new Date(startingParts[0], startingParts[1] - 1, startingParts[2])
+
+      const startingDateMilli = new Date(startingDateFormatted);
       
       const daysSinceStart = date.getTime() / 86400000 - startingDateMilli/86400000;
 
