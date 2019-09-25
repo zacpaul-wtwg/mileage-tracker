@@ -27,3 +27,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+[Vue Component Lifecycle diagram](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram)
+
+prettier & eslint
