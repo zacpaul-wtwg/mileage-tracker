@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       startingMileage: null,
-      startingDate: null,
+      startingDate: '2019-07-10',
       leaseTermYears: null,
       milesPerYear: null,
     };
@@ -45,7 +45,6 @@ export default {
       ];
     },
     estimatedMileage(){
-
       const today = new Date();
 
       const date = new Date((today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear());
@@ -55,10 +54,12 @@ export default {
       const startingDateFormatted = new Date(startingParts[0], startingParts[1] - 1, startingParts[2])
 
       const startingDateMilli = new Date(startingDateFormatted);
-      
+
       const daysSinceStart = date.getTime() / 86400000 - startingDateMilli/86400000;
 
-      const daysInLease = this.leaseTermYears * 365;
+      window.alert(startingDateMilli/86400000);
+
+      const daysInLease = parseFloat(this.leaseTermYears) * 365;
 
       const totalMiles = (parseFloat(this.leaseTermYears) * parseFloat(this.milesPerYear));
 
